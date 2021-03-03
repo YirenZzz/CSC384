@@ -1,0 +1,9 @@
+1. When checking for the deadlock in heur_alternate function, it is important to consider whether the snowball is at the corner or near the wall (if the destination is not at the same corner or wall with the snowball, deadlock will appear).
+
+2. There are many corners, not only the four board corners but also corners formed between the wall and obstacles.
+
+3. Different types of snowballs can have different distances cost, for example, A, B, C, G type (two or more snowballs stack together) can have more distance cost than type b, m, s(single snowball), since they need to be apart first before moving them to destination and only one snowball can be move each time. 
+
+4. Make the Robot trend to chooses the nearest snowball to save time by storing distances between robot and each snowball, then choosing the minimum distance and add it to the total state distance.
+
+5. Try to reduce iterations in every for loop and every dictionary, since it will increase run time.
